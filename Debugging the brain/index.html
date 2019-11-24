@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Debugging the brain</title>
+
+		<link rel="stylesheet" href="https://use.typekit.net/gxl0wpb.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/custom.css">
+		<link rel="stylesheet" href="lib/css/fa_all.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Debugging the brain</h1>
+					<p>
+						Inside the ultimate black box
+					</p>
+					<aside class="notes">
+						<h3>Why am I here?</h3>
+						<p>To shed some light on the cognition that underpins the problem solving process</p>
+						<p>A bit of a mix of:</p>
+						<ul>
+							<li>my experiences as a developer</li>
+							<li>learnings I have picked up along the way</li>
+							<li>current research in neuroscience, psychology and cognitive science</li>
+						</ul>
+						<p>Speculation, extrapolation</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="flex center around">
+						<img class="laura" src="images/laura5.png" />
+						<div class="">
+							<h2>Laura Weatherhead</h2>
+							<p><a href="https://twitter.com/lssweatherhead">@lssweatherhead</a></p>
+							<p>Full-Stack Developer</p>
+							<p>Artificial Intelligence & Computer Science</p>
+						</div>
+						<img class="laura" src="images/laura6.png" />
+					</div>
+					<p class="">
+						Adopted Scot. Pedant. Arachnophobe. Chocaholic. Amateur Acrobat.
+					</p>
+
+					<aside class="notes">
+						<p>My degree was in CS & AI, and when I was at uni I became fascinated by how technology can be used to model an individual's understanding of a problem space and then use that information for e.g. game mechanics, ALEs</p>
+						<p>AI is a 2-way street. Using human intelligence as a benchmark for artificial intelligence. Using machines to better understand the brain: fMRIs, eye-tracking, cognitive modelling & ALEs</p>
+						<p>Perfect feedback loop, right? ...</p>
+						<p>And really, why wouldn't you be interested in the brain? My ambitions of being an astronaut, ballerina, olympic gymnast have fallen by the wayside - so I make a living with my brain</p>
+						<p>Turns out that outside of the technical sphere, not a lot of people actually know what a "developer" does, so when people ask me...</p>
+					</aside>
+				</section>
+
+				<section data-background="images/dark.jpeg">
+					<aside class="notes">
+						<h3>The Scene</h3>
+						<p>Thursday afternoon. Raining.</p>
+						<p>Project/feature/bug but it's too hard/not working/doesn't make sense</p>
+						<p>Everything feels futile and you are questioning your own abilities</p>
+					</aside>
+				</section>
+
+				<section data-background="images/t-o-c.png">
+					<div class="flex center around invert full-width">
+						<h1 class="fragment fade-left">Tired</h1>
+						<h1 class="fragment fade-left">Overwhelmed</h1>
+						<h1 class="fragment fade-left">Confused</h1>
+					</div>
+					<aside class="notes">
+						<p>Why are you feeling this way?</p>
+						<ul>
+							<li>You’re tired. You have a child/sick relative/loud neighbour/heartbreak</li>
+							<li>You’re overwhelmed. You have anxiety/deadlines/responsibility/not enough time/mixed priorities</li>
+							<li>You’re confused. It should work but it doesn’t and you don’t understand why. Something/many things are missing and you’re lost on what your next step should be</li>
+						</ul>
+					</aside>
+				</section>
+
+				<!-- TIRED SLIDES -->
+				<section>
+					<div class="flex end between">
+						<h2>Tired</h2>
+						<div style="display: inline-block;" class="fragment fade-left">
+							<img src="images/tired.gif" />
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Why does being tired make the problem solving process difficult? We are going to talk about...</p>
+						<ul>
+							<li>Sleep deprivation</li>
+							<li>Problem fatigue / mind wandering</li>
+							<li>The effects of ego depletion on focus and effort</li>
+						</ul>
+						<p>Let’s talk about what is happening in the brain when you are tired.</p>						
+					</aside>
+				</section>
+
+				<section>
+					<div class="">
+						<h1 class="quote highlight handwriting">"I love sleep. My life has the tendency to fall apart when I'm awake, you know?"</h1>
+					</div>
+					<p class="quote-attr">Ernest Hemingway</p>
+
+					<aside class="notes">
+						<h3>What is the impact of sleep deprivation?</h3>
+						<p>Ever tried to teach a tired child anything?</p>
+						<p>Push and pull between amygdala (anger, irritability, anxiety, fear) and neocortex (consciousness, attention, perception, reasoning)</p>
+						<p>Won't be surprised to learn that memory, manual dexterity & complex decision making are the first affected brain regions - parts of the brain actually fall asleep at different times</p>
+						<p>Mitochondria are tiny structure that fuel the body by producing molecules called <b>adenosine triphosphate</b> or ATP...</p>
+						<p>Long term effects of lack of sleep involve raised bood pressure/heart problems, but short term sleep deprivation can impact on our memories</p>
+					</aside>
+				</section>
+
+				<section data-background="images/tetris.png">
+					<aside class="notes">
+						<p>David Eagleman references a study that attempted to teach retrograde amnesiacs how to play tetris.</p>
+						<p>SW sleep preserves our memories by recapitulating what we have learned during the day. REM incorporates these memories into what we already know.</p>
+						<p>...we still don't fully understand the reasons/implications of sleep - elephants 4 hrs, big cats 15 hrs, humans 8 hrs, brown bat 19 hrs</p>
+						<p>But we know it plays a number of key roles, and without it your brain will struggle to fully function!</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2 class="abs-float invert">The wandering mind</h2>
+					<img src="images/wandering.jpeg" />
+
+					<aside class="notes">
+						<p>I find that when I am struggling with a problem not only is it energy consuming, but one of the side-effects is lack of focus or "mind-wandering"</p>
+						<p>Your mind is like a town - when focused everyone is in the town square but when wandering, activity is distributed. Default mode network.</p>
+						<p>Benefits of mindfulness are well documented. + shrunken amygdala + enlarged prefrontal cortex. During mind wandering, subjects report less happy than not.</p>
+						<p><b>Ever daydreamed through a green light or asked someone for the time only to have zoned out by the time they tell you the answer? So why do we do it and how could it help?</b></p>
+						<p>Advantages of mind wandering include:</p>
+						<ul>
+							<li>attentional cycling - honing mental juggling skills - working on different problems simultaneously</li>
+							<li>dishabituation - refreshed attention, brain responds to change - change of mental scenery</li>
+							<li>relief from boredom - ability to persevere with tedious but necessary tasks</li>
+							<li>also, problem incubation - where your brain is able to work asynchronously on a problem without direct input from your consciousness</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Unusual Use Tasks</h2>
+
+					<div class="icons flex end between" style="font-size: 80px;">
+						<i class="fas fa-pencil-alt"></i>
+						<i class="fas fa-feather"></i>
+						<i class="fas fa-key"></i>
+						<i class="fas fa-paperclip"></i>
+						<i class="fas fa-utensil-spoon"></i>
+					</div>
+
+					<aside class="notes">
+						<p>In order to explore the potential impact of mind wandering on creative problem solving, Baird & Smallwood conducted a study involving Unusual Use Tasks</p>
+						<p>Their hypothesis was that tasks without a working memory load elicits more mind wandering than tasks with a working memory load... </p>
+						<p>pencil - chopstick, lock pick, javelin, rolling pin, </p>
+						<p>Problem incubation where freeing up your working memory allows it to work unhindered and autonomously on the problem that the conscious brain provided it.</p>						
+						<p>So got get that cup of tea, or find a chore to do or let your mind wander off because it all helps!</p>			
+					</aside>
+				</section>
+
+				<section>
+					<h2>Ego depletion</h2>
+					<img src="images/sims.png" />
+
+					<div class="align-left reference">
+						<a class="ref" href="https://www.ea.com/en-gb/games/the-sims/the-sims-4">Source: Electronic Arts Inc. (2019). The Sims Video Games - Official EA Site.</a>
+					</div>
+
+					<aside class="notes">
+						<p>All forms of voluntary attention and effort (cognitive, emotional & physical) draw at least partly on a pool of shared mental energy</p>
+						<p>Successive tasks where you force yourself to do something mean that you become increasingly unwilling to exert additional self-control</p>
+						<p>This phenomenon is called <b>ego depletion</b></p>
+						<p>Situations that deplete you are varied but generally involve conflict and the need to suppress a natural tendency</p>
+						<ul>
+							<li>e.g. responding kindly to bad behaviour or suppressing a natural emotional response - maybe in the work place</li>
+							<li>e.g. making a series of choices each of which involve conflict e.g. choosing what to have for lunch ;)</li>
+							<li>e.g. trying to impress people - suppressing your personality, overriding your own emotions</li>
+						</ul>
+						<p>The nervous system consumes more glucose than most other parts of the body, and effortful mental activity appears to especially expensive in the currency of glucose</p>
+						<p>The cake is not a lie</p>
+					</aside>
+				</section>
+				<!-- END TIRED SLIDES -->
+
+				<!-- OVERWHELMED SLIDES -->
+				<section>
+					<div class="flex end between">
+						<h2>Overwhelmed</h2>
+						<div style="display: inline-block;" class="fragment fade-left">
+							<img src="images/overwhelmed.webp" />
+						</div>
+					</div>
+
+					<aside class="notes">
+						<h3>How does feeling overwhelmed impact the problem solving process and why might we feel this way?</h3>
+						<p>We are going to talk about:</p>
+						<ul>
+							<li>the working memory and overloading it</li>
+							<li>too many (conflicting) responsibilities</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<div class="">
+						<h2>Too many things</h2>
+						<div class="show full-width">
+							<img src="images/interrupted_edit.PNG" />
+						</div>					
+					</div>
+					<div class="align-left reference">
+						<a class="ref" href="https://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/">Source: Heeris, J. (2013). This Is Why You Shouldn’t Interrupt a Programmer - The Slightly Disgruntled Scientist. [online] Heeris.id.au. Available at: https://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/
+						</a>
+					</div>
+
+					<aside class="notes">
+						<h3>Estimates vary - brain processes around 11 million bits - aware of ~40 - fit ~4 items into working memory</h3>
+						<p>Working memory can "stack-overflow". 1-7 seconds life.</p>
+						<p>Gets encoded as chunks</p>
+						<p>Like trying to write in coffee cup foam</p>
+						<p>Stressed/anxious? Take the unrelated items out of your working memory and write them down.</p>
+					</aside>
+				</section>
+
+				<section data-background="images/monkeys1.png">
+					<div class="show full-width align-right">
+						<h2 class="">Who's monkey is that?</h2>
+						<div class="reference">
+							<a class="ref" href="https://twitter.com/CliveRCooper">Artwork by @CliveRCooper</a>
+						</div>
+					</div>
+					<div style="display: inline-block;" class="fragment fade-left">
+						<img src="images/monkeys2.png" />
+					</div>
+					<img class="abs full" src="images/monkeys3.png" />
+
+					<aside class="notes">
+						<h3>Who's got the monkey? Article by William Oncken Jr & Donald Wass</h3>
+						<p>I have: learning, coding, testing, scoping, mentoring. I look after: time tracking</p>
+						<p>Sometimes I foster UX, requirements, speaking, open-source monkeys</p>
+						<p>Life monkeys must sometimes take priority</p>
+						<p>Be aware of which monkeys you are looking after</p>
+					</aside>
+				</section>
+
+				<!-- <section>
+					<h1>Perfectionism & Learned Helplessness</h1>
+				</section> -->
+				<!-- END OVERWHELMED SLIDES -->
+
+				<!-- CONFUSED SLIDES -->
+				<section>
+					<div class="flex end between">
+						<div style="display: inline-block;" class="fragment fade-left">
+							<img src="images/confused.webp" />
+						</div>
+						<h2>Confused</h2>					
+					</div>
+
+					<aside class="notes">
+						<h3>Being confused is exhausting - running mental rings</h3>
+						<ul>
+							<li>imposing order on our thoughts by playing to the brain's strengths</li>
+							<li>being awrae of cognitive biases that can be detrimental to solving problems</li>
+							<!-- <li>the origins of human creativity and how we could use this to get unstuck</li> -->
+						</ul>
+					</aside>
+				</section>
+
+				<!-- <section>				 -->
+					<!-- <div class="fragment fade-left invert">
+						<h1>Ask for help</h1>
+					</div>
+
+					<aside class="notes">
+						<h3>Your needs are not obvious. Can try hovering and hoping, but not super effective</h3>
+						<p>Heidi Grant in her TED Talk outlines...</p>
+						<ul>
+							<li>be concise</li>
+							<li>be realistic</li>
+							<li>avoid too many apologies/disclaimers</li>
+							<li>30x more likely to get help if you ask in person</li>
+							<li>follow up after</li>
+						</ul>
+					</aside>
+				</section> -->
+
+				<section data-background="images/story.jpeg">
+					<h2 class="invert bg">The flawed story</h2>
+
+					<aside class="notes">
+						<p>A flawed story is one where the ending does not logically follow from the premise and events</p>
+						<h3>Sometimes flawed stories delight us - magic! But not usually in programming.</h3>
+						<p>Why is story so important?</p>
+						<p>In Yuval Noah Harari's book - Sapiens - he talks about an individual being able to "keep up" with ~150 other people, and posits that we are only able to successfully cooperate as a species through the means of shared fiction</p>
+						<p>We are built for story, it is in everything we do, think and want. A healthy mind is the "central protagonist" in their own hero epic</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Rubber duck debugging</h2>
+
+					<img src="images/ducks.png" />
+
+					<aside class="notes">
+						<p>Play to your brain's strengths:</p>
+						<ul>
+							<li>Speak/write your problem out, because by sequencing it you are removing it from your RAM and ordering it. Can see your own flaws. Rubber duck debugging!</li>
+							<li>Also, by speaking you are <b>hearing</b> and by writing you are <b>seeing</b>. Brain is like a city.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Challenge your biases</h2>
+					<div style="display: inline-block;" class="fragment fade-left">
+						<img src="images/how_it_works.png" />
+					</div>
+
+					<aside class="notes">
+						<p>When we learn about a problem space we start from a place of questioning...</p>
+						<p>Questions > beliefs > hypotheses > problem paradigm model > once established/complex we start to ignore/forget/discredit inconsistent information</p>
+						<p>We operate on models - they are shortcuts that allow us to progress through life efficiently - but we are flawed and so are our models</p>
+						<p>Often when we feel stuck it is because we are blind to the incorrect information we have encoded. Seek an open mind</p>
+					</aside>
+				</section>
+
+				<!-- <section>
+					<h2>The 3 Bs</h2>
+					<div class="flex center around invert full-width">
+						<h1 class="fragment fade-left">Bending</h1>
+						<h1 class="fragment fade-left">Breaking</h1>
+						<h1 class="fragment fade-left">Blending</h1>
+					</div>
+
+					<aside class="notes">
+						<p>One of the greatest powers of the human brain is that of what-if... Some of the best fiction and most innovative solutions have been born out of these two words.</p>
+						<p>Give your brain more to work with: David Eagleman & Anthony Brandt in their book The Runaway Species talk about the 3 B's of creativity...</p>
+						<ul>
+							<li>bending: adapt what is already out there</li>
+							<li>breaking: reductionism - boil it down to its component parts</li>
+							<li>blending: combine sources or find related/similar problem spaces</li>
+						</ul>
+					</aside>
+				</section> -->
+				<!-- END CONFUSED SLIDES -->
+
+				<section style>
+					<div class="flex bib">
+						<div>
+							<p>Books</p>
+							<ul class="">
+								<li>Adam Gazzaley, Larry D. Rosen (2016).The Distracted Mind</li>
+								<li>Anil Seth, Chrid Frith (2018). 30-Second Brain</li>
+								<li>Daniel Kahneman (2011). Thinking, Fast and Slow</li>
+								<li>Daniel Levitin (2014). The Organized Mind: Thinking Straight in the Age of Information Overload</li>
+								<li>David Eagleman (2011). Incognito</li>
+								<li>David Eagleman, Anthony Brandt (2017). The Runaway Species: How Human Creativity Remakes the World.</li>
+								<li>Dean Burnett (2016). The Idiot Brain: A Neuroscientist Explains What Your Head Is Really Up To</li>
+								<li>Kat Duff (2014). The Secret Life of Sleep</li>
+								<li>Matthew Walker (2017). Why We Sleep</li>
+								<li>Will Storr (2019). The Science of Storytelling: Why Stories Make Us Human, and How to Tell Them Better</li>
+								<li>Yuval Noah Harari (2011). Sapiens: A Brief History of Humankind</li>
+							</ul>
+						</div>
+						<div style="margin-left: 15px;">
+							<p>Articles</p>
+							<ul class="">
+								<li>Baird, B., Smallwood, J., Mrazek, M. D., Kam, J., Franklin, M. S., & Schooler, J. W. (in press). Inspired by distraction: Mind-wandering facilitates creative incubation. Psychological Science</li>
+								<li>Csikszentmihályi, M.; Abuhamdeh, S. & Nakamura, J. (2005), "Flow", in Elliot, A. (ed.), Handbook of Competence and Motivation, New York: The Guilford Press, pp. 598–698</li>
+								<li>Mooneyham, Benjamin & Schooler, Jonathan. (2013). The Costs and Benefits of Mind-Wandering: A Review. Canadian journal of experimental psychology 67. 11-8. 10.1037/a0031569.</li>
+								<li>William Oncken, Jr.Donald L. Wass (1999). Management Time: Who’s Got the Monkey?. Harvard Business Review.</li>
+							</ul>
+							<p>Talks</p>
+							<ul class="">
+								<li><a href="https://www.ted.com/talks/mihaly_csikszentmihalyi_on_flow">Csikszentmihalyi, M. (2019). Flow, the secret to happiness. Ted.com.</a></li>
+								<li><a href="https://www.youtube.com/watch?v=OhrDrt_w794">Burstow, E. (2018). Umbraco UK Festival 2018: Developing Talent - learning never really stops. YouTube.</a></li>
+								<li><a href="https://www.ted.com/talks/heidi_grant_how_to_ask_for_help_and_get_a_yes">Grant, Heidi. (2017). How to ask for help -- and get a “yes.” Ted.com.</a></li>
+							</ul>
+							<p>Web</p>
+							<ul class="">
+								<li><a href="https://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/">Heeris, J. (2013). This Is Why You Shouldn’t Interrupt a Programmer - The Slightly Disgruntled Scientist. Heeris.id.au.</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<aside class="notes">
+						<p>So from moral psychology development in infants to fMRIs of dog's brains learning new words to the baffling case for consciousness...</p>
+					</aside>
+				</section>
+
+				<section data-background="images/stars.jpeg">
+					<div>
+						<div style="display: inline-block;" class="invert fragment fade-right">
+							<h3 class="bg-trans">There are as many connections in a single cubic centimetre of brain tissue as there are stars in the milky way galaxy.</h3>
+						</div>
+						<div style="display: inline-block;" class="invert fragment fade-left">			
+							<h3 class="bg-trans">So if you ever feel lazy or dull, take heart:</h3>
+						</div>
+						<div style="display: inline-block;" class="invert fragment fade-right">			
+							<h1 class="bg-trans">You’re the busiest, brightest thing on the planet</h1>
+						</div>
+						<div style="display: block;" class="fragment fade-left align-left">
+							<p class="invert">- Incognito, David Eagleman</p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Incognito, David Eagleman</p>
+					</aside>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+		<style type="text/css">
+			/* 1. Style header/footer <div> so they are positioned as desired. */
+			#header-left {
+				position: absolute;
+				top: 0%;
+				left: 0%;
+			}
+			#header-left .logo {
+				padding: 20px;
+				display: inline-flex;
+			}
+			#header-left .logo .icon {
+				max-height: 70px;
+				align-self: center;
+			}
+			#header-left .logo .company {
+				max-height: 80px;
+				align-self: center;
+			}
+		</style>
+
+		<!-- 2. Create hidden header/footer <div> -->
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="header-left">
+					<div class="logo">
+						<img class="icon" alt="Icon" src="images/logo.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="lib/js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				$('div.reveal').append(header);
+		}
+		</script>
+	</body>
+</html>

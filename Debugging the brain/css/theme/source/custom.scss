@@ -1,0 +1,257 @@
+/**
+ * Blood theme for reveal.js
+ * Author: Walther http://github.com/Walther
+ *
+ * Designed to be used with highlight.js theme
+ * "monokai_sublime.css" available from
+ * https://github.com/isagalaev/highlight.js/
+ *
+ * For other themes, change $codeBackground accordingly.
+ *
+ */
+
+ // Default mixins and settings -----------------
+ @import "../template/mixins";
+ @import "../template/settings";
+ // ---------------------------------------------
+ 
+ // Include theme-specific fonts
+ 
+ @font-face {
+    font-family: 'squiggle';
+    src: url('/fonts/SquiggleItalic.ttf');
+}
+
+@font-face {
+    font-family: 'mid';
+    src: url('/fonts/LauraMidWeight.ttf');
+}
+ 
+ // Colors used in the theme
+ $spun: #9e1b3d;
+ $grey: #dcdcdc;
+ $codeBackground: #23241f;
+ 
+ $backgroundColor: $grey;
+ 
+ // Main text
+ $mainFont: squiggle, 'sans-serif';
+ $mainColor: $spun;
+ $mainFontSize: 2rem;
+ 
+ // Headings
+ $headingFont: squiggle, 'sans-serif';
+ $headingTextShadow: 2px 2px 2px $spun;
+ $headingColor: $spun;
+ 
+ // h1 shadow, borrowed humbly from 
+ // (c) Default theme by Hakim El Hattab
+ $heading1TextShadow: none;//0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+ 
+ // Links
+ $linkColor: $spun;
+ $linkColorHover: lighten( $linkColor, 20% );
+ 
+ // Text selection
+ $selectionBackgroundColor: $spun;
+ $selectionColor: #ea6953;
+ 
+ 
+ // Theme template ------------------------------
+ @import "../template/theme";
+ // ---------------------------------------------
+ 
+ // some overrides after theme template import
+ 
+ .reveal {
+    p {
+        font-weight: 300;
+        text-shadow: none;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-shadow: none;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        text-shadow: none;
+    }
+
+    h3 {
+        font-size: 1.1em;
+        text-shadow: none;
+    }
+
+    a {
+        color: $selectionColor;
+
+        &.ref {
+            font-size: 0.5em;
+        }
+    }
+
+    .invert {
+        color: $grey;
+
+        h1, h2, h3, p {
+            color: $grey;
+            background: $spun;
+            padding: 5px;
+        }
+    }
+
+    .bg {
+        background: $spun;
+        padding: 5px;
+
+        &-trans {
+            background: rgba(255,255,255,0.65);
+            padding: 15px;
+        }
+    }
+
+    .abs-float {
+        position: absolute;
+        padding: 5rem 10rem;
+    }
+
+    .quote {
+        &.highlight {
+            //border-bottom: 10px solid $spun;
+        }
+    }
+
+    .reference {
+        margin-top: 1em;
+        line-height: 0.5em;
+        //font-size: 0.5em;
+    }
+
+    .bib {
+        font-size: 0.45em;
+
+        p {
+            margin: 10px 0;
+        }
+    }
+ }
+ 
+//  .reveal h1,
+//  .reveal h2,
+//  .reveal h3,
+//  .reveal h4,
+//  .reveal h5,
+//  .reveal h6 {
+//      font-weight: 700;
+//  }
+ 
+.reveal p code {
+    background-color: $codeBackground;
+    display: inline-block;
+    border-radius: 7px;
+}
+ 
+.reveal small code {
+    vertical-align: baseline;
+}
+
+.reveal {
+    .super-up {
+        font-weight: bold;
+        color: green;
+    }
+
+    .handwriting {
+        font-family: mid, 'sans-serif';
+    }
+}
+
+.reveal section {
+    img {
+        border: 0;
+        margin: 0;
+        box-shadow: none;
+        background: none;
+
+        &.laura {
+            height: 30rem;
+            margin: 40px 20px;
+        }
+
+        &.width {
+            &-35 {
+                width: 35rem;
+            }
+
+            &-50 {
+                width: 50rem;
+            }
+
+            &-80 {
+                width: 80rem;
+            }
+        }
+    }
+
+    p {
+        font-size: $mainFontSize - 0.5;
+    }
+
+    .flex {
+        display: flex;
+
+        &.center {
+            align-items: center;
+        }
+
+        &.end {
+            align-items: flex-end;
+        }
+
+        &.start {
+            align-items: flex-start;
+        }
+
+        &.around {
+            justify-content: space-around;
+        }
+
+        &.between {
+            justify-content: space-between;
+        }
+
+        &.full-width {
+            margin-right: calc(-40vw / 2 + 500px / 2);
+            margin-left: calc(-40vw / 2 + 700px / 2);
+        }
+
+        .fragment {
+            margin: 0 5rem 1rem;
+        }
+    }
+
+    .show {
+        &.full-width {
+            margin-right: calc(-40vw / 2 + 500px / 2);
+            margin-left: calc(-40vw / 2 + 500px / 2);
+        }
+    }
+
+    .abs {
+        &.full {
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+}
